@@ -250,7 +250,7 @@ mod tests {
 
         let mut rows = 0;
 
-        while let Some(_) = iter.next().await {
+        while iter.next().await.is_some() {
             rows += 1;
         }
 
